@@ -6,6 +6,10 @@ const paintings = [
         color: 0xaaaaaa,
         images: ['Yellow Fever.png'],
         position: { x: -3.9, y: 2, z: -6 },
+        citations: [
+            '"José Guadalupe Posada - a Man Leaning Over the Side of a Bed Vomiting, From a Broadside Entitled \'Death of  Aurelio Caballero Due to Yellow Fever in Veracruz\' - the Metropolitan Museum of Art," n.d. https://www.metmuseum.org/art/collection/search/735313.',
+            'Mph, Andrea Prinzi Ph.D. "History of Yellow Fever in the U.S." ASM.org, May 17, 2021. https://asm.org/articles/2021/may/history-of-yellow-fever-in-the-u-s.'
+        ]
     },
     {
         title: 'Leprosy',
@@ -13,6 +17,10 @@ const paintings = [
         color: 0xff6b6b,
         images: ['Leprosy.png'],
         position: { x: -3.9, y: 2, z: -2 },
+        citations: [
+            'Robbins, Gwen, V. Mushrif Tripathy, V. N. Misra, R. K. Mohanty, V. S. Shinde, Kelsey M. Gray, and Malcolm D. Schug. "Ancient Skeletal Evidence for Leprosy in India (2000 B.C.)." PLoS ONE 4, no. 5 (May 26, 2009): e5669. https://doi.org/10.1371/journal.pone.0005669.',
+            'Historic England. "The Time of Leprosy: 11th Century to 14th Century." Accessed December 9, 2025. https://historicengland.org.uk/research/inclusive-heritage/disability-history/1050-1485/time-of-leprosy/.'
+        ]
     },
     {
         title: 'Smallpox',
@@ -20,6 +28,10 @@ const paintings = [
         color: 0x4ecdc4,
         images: ['Smallpox1.png', 'Smallpox2.png', 'Smallpox3.png', 'Smallpox4.png'],
         position: { x: -3.9, y: 2, z: 2 },
+        citations: [
+            '"Letter From  Abigail Adams to  John Adams,  13 -  14 July 1776," n.d. https://www.masshist.org/digitaladams/archive/doc?id=L17760713aa.',
+            'Smallpox. "History of Smallpox," October 23, 2024. https://www.cdc.gov/smallpox/about/history.html.'
+        ]
     },
     {
         title: 'Whooping Cough',
@@ -27,6 +39,10 @@ const paintings = [
         color: 0xffe66d,
         images: ['Whooping cough1.png', 'Whooping cough2.png'],
         position: { x: -3.9, y: 2, z: 6 },
+        citations: [
+            'Internet Archive. "KhulāSat Al-tajāRib / Bahā al-Dawlah QavīM al-DīN al-NūRbakhshī. : NūRbakhshī, Bahāʾ al-Dawlah, D. Ca. 1505 : Free Download, Borrow, and Streaming : Internet Archive," 1661. https://archive.org/details/6790548.med.yale.edu/page/n5/mode/1up.',
+            'Galassi, Francesco Maria, Elena Varotto, and Mariano Martini. "History of Pertussis: From an Ancient Scourge to a Contemporary Health Burden." PubMed 64, no. 4 (December 27, 2023): E507–11. https://doi.org/10.15167/2421-4248/jpmh2023.64.4.3163.'
+        ]
     },
     {
         title: 'Scarlet Fever',
@@ -34,6 +50,10 @@ const paintings = [
         color: 0xbbbbbb,
         images: ['Scarlet Fever.png'],
         position: { x: 3.9, y: 2, z: -6 },
+        citations: [
+            'Tomlinson, Andie. "Alibert & Early French Dermatology | De Re Medica," September 22, 2016. https://blogs.library.mcgill.ca/osler-library/alibert-early-french-dermatology/.',
+            '———. "Scarlet Fever: A Deadly History and How It Prevails." ASM.org, January 24, 2023. https://asm.org/articles/2023/january/scarlet-fever-a-deadly-history-and-how-it-prevails.'
+        ]
     },
     {
         title: 'Tuberculosis',
@@ -41,6 +61,11 @@ const paintings = [
         color: 0xa8e6cf,
         images: ['Tuberculosis1.png', 'Tuberculosis2.png'],
         position: { x: 3.9, y: 2, z: -2 },
+        citations: [
+            'Baker, Oussama, Bérénice Chamel, Éric Coqueugniot, Rima Khawam, Danielle Stordeur, Pascale Perrin, György Pálfi, et al. "Prehistory of Human Tuberculosis: Earliest Evidence From the Onset of Animal Husbandry in the Near East." Paléorient 43, no. 2 (January 1, 2017): 35–51. https://doi.org/10.3406/paleo.2017.5765.',
+            'Barberis, I, Nl Bragazzi, L Galluzzo, and M Martini. "The History of Tuberculosis: From the First Historical Records to the Isolation of Koch\'s Bacillus," March 1, 2017. https://pmc.ncbi.nlm.nih.gov/articles/PMC5432783/#R22.',
+            'Tuberculosis (TB). "Treating Tuberculosis," April 17, 2025. https://www.cdc.gov/tb/treatment/index.html.'
+        ]
     },
     {
         title: 'Measles',
@@ -48,6 +73,10 @@ const paintings = [
         color: 0xdda15e,
         images: ['Measles.png'],
         position: { x: 3.9, y: 2, z: 2 },
+        citations: [
+            'The National Gallery, London. "The Plague at Ashdod | Close Examination | National Gallery, London," n.d. https://www.nationalgallery.org.uk/research/research-resources/research-papers/close-examination/the-plague-at-ashdod.',
+            '"MSK Library Guides: Public Health: History of Measles," n.d. https://libguides.mskcc.org/publichealth/MeaslesHistory.'
+        ]
     },
     {
         title: 'Typhus Fever',
@@ -55,6 +84,10 @@ const paintings = [
         color: 0xbc6c25,
         images: ['Typhus1.png', 'Typhus2.png'],
         position: { x: 3.9, y: 2, z: 6 },
+        citations: [
+            'Internet Archive. "Hieronymi Fracastorii ... De Sympathia Et Antipathia Rerum Liber Vnus De Contagione Et Contagiosis Morbis Et Curatione Libri III. : Girolamo Fracastoro : Free Download, Borrow, and Streaming : Internet Archive," 1546. https://archive.org/details/bub_gb_B580FxRJwQUC/page/n91/mode/2up?utm_source=chatgpt.com.',
+            'Conlon, Joseph M., LCDR, MSC, USN. "THE HISTORICAL IMPACT OF EPIDEMIC TYPHUS," n.d. https://www.montana.edu/historybug/documents/TYPHUS-Conlon.pdf.'
+        ]
     },
     {
         title: 'Malaria',
@@ -62,6 +95,10 @@ const paintings = [
         color: 0x9d4edd,
         images: ['Measles.png'],
         position: { x: 0, y: 2, z: 11.15 },
+        citations: [
+            'Antiques, Anthony\'s Fine Art And. "Meditations on a Rediscovered Masterpiece." Artsy, August 10, 2018. https://www.artsy.net/article/anthony-s-fine-art-and-antiques-meditations-rediscovered-masterpiece.',
+            'Svcm, Andrea Prinzi Ph.D., Mph, Rodney E. Rohde, Ph.D.,. "The History of Malaria in the United States." ASM.org, September 15, 2023. https://asm.org/articles/2023/september/the-history-of-malaria-in-the-united-states.'
+        ]
     },
 ];
 
@@ -100,6 +137,16 @@ class VirtualGallery {
         document.getElementById('closeModal').addEventListener('click', () => {
             this.closePaintingModal();
         });
+
+        // Citations button toggle
+        const citationsBtn = document.getElementById('citationsBtn');
+        const citationsContent = document.getElementById('citationsContent');
+        if (citationsBtn && citationsContent) {
+            citationsBtn.addEventListener('click', () => {
+                citationsContent.classList.toggle('show');
+                citationsBtn.textContent = citationsContent.classList.contains('show') ? 'Hide Citations' : 'Citations';
+            });
+        }
 
         // Mobile controls
         document.querySelectorAll('.mobile-btn').forEach(btn => {
@@ -1074,6 +1121,27 @@ class VirtualGallery {
         
         document.getElementById('paintingTitle').textContent = paintingData.title;
         document.getElementById('paintingDescription').textContent = paintingData.description;
+        
+        // Populate citations
+        const citationsList = document.getElementById('citationsList');
+        const citationsBtn = document.getElementById('citationsBtn');
+        const citationsContent = document.getElementById('citationsContent');
+        
+        if (paintingData.citations && paintingData.citations.length > 0) {
+            citationsList.innerHTML = '';
+            paintingData.citations.forEach(citation => {
+                const li = document.createElement('li');
+                li.textContent = citation;
+                citationsList.appendChild(li);
+            });
+            citationsBtn.style.display = 'block';
+        } else {
+            citationsBtn.style.display = 'none';
+        }
+        
+        // Hide citations content by default
+        citationsContent.classList.remove('show');
+        citationsBtn.textContent = 'Citations';
         
         // Load and display the first image
         this.displayImage(0, paintingData);
