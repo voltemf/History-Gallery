@@ -93,7 +93,7 @@ const paintings = [
         title: 'Malaria',
         description: 'Malaria was all over the United States with great concentration in the Southern region and along rivers. It is predicted that between 1500-1800 European settlers and African slaves introduced the disease into the New World. Malaria would cause fever, chills, extreme fatigue and cycles of illness that made it difficult for settlers and farmers to maintain their daily activities and establish new settlements. Because of warm temperatures, inadequate drainage and standing water on farms for example farms producing rice and cotton the mosquitoes were able to breed creating ideal breeding grounds for the disease. Doctors at that time were aware of the symptoms of malaria but could not identify the mosquito as the transmitter of the disease. So quinine became the primary treatment for malaria. By the middle of the 1800s malaria had become one of the most prevalent diseases affecting people in rural communities. This disease affected the lives of the people in these communities and influenced the population size and work patterns of the entire nation.',
         color: 0x9d4edd,
-        images: ['Measles.png'],
+        images: ['Malaria.png'],
         position: { x: 0, y: 2, z: 11.15 },
         citations: [
             'Antiques, Anthony\'s Fine Art And. "Meditations on a Rediscovered Masterpiece." Artsy, August 10, 2018. https://www.artsy.net/article/anthony-s-fine-art-and-antiques-meditations-rediscovered-masterpiece.',
