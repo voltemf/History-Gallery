@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseases Through the Ages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', Georgia, serif;
+            line-height: 1.8;
+            color: #2c2c2c;
+            background: #d3d3d3;
+        }
+
+        .header-logo {
+            padding: 30px 40px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .gallery-link {
+            font-size: 1.1em;
+            font-weight: 300;
+            color: #2c2c2c;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-link:hover {
+            color: #666;
+            text-decoration: underline;
+        }
+
+        .logo {
+            display: inline-block;
+            font-size: 1.8em;
+            font-weight: 300;
+            color: #2c2c2c;
+            text-decoration: none;
+            border: 2px solid #2c2c2c;
+            padding: 8px 20px;
+            letter-spacing: 2px;
+        }
+
+        .logo-sub {
+            font-size: 0.5em;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .hero {
+            max-width: 100%;
+            margin: 0;
+            padding: 100px 40px 80px;
+            text-align: left;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/HISTOVERALL.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 4.5em;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: #ffffff;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #ffffff;
+            font-weight: 300;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .enter-btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: #2c2c2c;
+            color: #f5f5f0;
+            text-decoration: none;
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            border: 2px solid #2c2c2c;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            border-radius: 50px;
+        }
+
+        .enter-btn:hover {
+            background: transparent;
+            color: #2c2c2c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px 100px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #e0e0e0;
+            margin: 60px 0;
+        }
+
+        .period-section {
+            margin-bottom: 80px;
+        }
+
+        .period-date {
+            font-size: 0.9em;
+            color: #999;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .period-title {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 50px;
+            color: #2c2c2c;
+        }
+
+        .disease-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .disease-card {
+            background: white;
+            padding: 40px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .disease-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .disease-name {
+            font-size: 1.8em;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #2c2c2c;
+            border-bottom: 2px solid #2c2c2c;
+            padding-bottom: 10px;
+        }
+
+        .disease-description {
+            color: #444;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+        }
+
+        .historical-note {
+            background: #fafaf8;
+            border-left: 3px solid #2c2c2c;
+            padding: 20px;
+            margin-top: 20px;
+            font-style: italic;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .footer {
+            background: #2c2c2c;
+            color: #f5f5f0;
+            padding: 60px 40px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .footer p {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .hero {
+                padding: 60px 20px 40px;
+            }
+
+            .content {
+                padding: 0 20px 60px;
+            }
+
+            .disease-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .period-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-logo">
+        <div class="logo">
+            Group Thirty<span class="logo-sub">Hist-1301</span>
+        </div>
+        <a href="htmlindex.html" class="gallery-link">Interactive Art Gallery</a>
+    </div>
+
+    <div class="hero">
+        <h1>PreHistoric Diseases<br>with<br>Medical Advancements</h1>
+        <p class="subtitle">How Diseases over History changes due to Medical Advancements</p>
+        <button id="backToGallery" class="enter-btn">Enter Now</button>
+    </div>
+
+    <div class="content" id="content">
+        <div class="divider"></div>
+
+        <!-- Prehistory to 1491 -->
+        <div class="period-section">
+            <p class="period-date">PREHISTORY - 1491</p>
+            <h2 class="period-title">Ancient Times</h2>
+
+            <div class="disease-grid">
+                <div class="disease-card">
+                    <h3 class="disease-name">Leprosy</h3>
+                    <p class="disease-description">
+                        <strong>Medieval Prevalence and Pathology</strong>
+                    </p>
+                    <div class="historical-note">
+                        Between the 11th and 14th centuries, Leprosy was a disease that dominated the landscape of the medieval England and was also greatly feared. One of the major reasons for this fear was the disease's disfiguring nature and its heavy physical downfall. The most commonly observed symptoms were: Physical Disfigurement - The nasal bridge disintegration and the loss of the extremities, for example, fingers and toes. Systemic Damage - The affected individuals suffered from blindness and got deep, painful wounds all over their bodies as well as weakened bones.
+                    </div>
+                    <div class="historical-note">
+                        <strong>The Institutional Response: "Leper Houses"</strong>
+                    </div>
+                    <div class="historical-note">
+                        "Lepers houses" or lazar hospitals, i.e. religious sanctuaries, were one of the major ways through which the crisis was responded to by communities from the late 11th century through 1350. The most important features of these places were: Holistic Care - The main goals of these facilities were physical and spiritual aids since no medical cures for the disease were available at that time. Daily Regimen - Patients were given refuge, food, and hygiene was looked after through washing, and spiritual health was provided through access to gardens and prayer.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Modern Medical Advances</strong>
+                    </div>
+                    <div class="historical-note">
+                        Thanks to modern medical science the world is no longer the same as it was in the medieval era. The emphasis has changed from mere refuge to real intervention. Present-day medicine incorporates specific antibiotics—such as Dapsone, Rifampin, and Clofazimine—that can cure the disease which used to be the cause of the social isolation of thousands.
+                    </div>
+                </div>
+
+                <div class="disease-card">
+                    <h3 class="disease-name">Tuberculosis</h3>
+                    <p class="disease-description">
+                        <strong>Archaeological Evidence and Ancient Pathology</strong>
+                    </p>
+                    <div class="historical-note">
+                        The differences of time of the archaeological site that has been excavated are shown by the three phases or periods: Phase ancienne (Ancient), Phase moyenne (Middle), and Phase récente (Recent). The archaeological excavations have revealed not only human skeletal remains but also a vast cultural knowledge that was preserved in the funerary practices and the treatment of the dead throughout these times.
+                    </div>
+                    <div class="historical-note">
+                        Among the finds are the bones of a young adult whose age has been estimated at 20–22 years. The pathological study of the lesions on the fibula led to the finding of the Mycobacterium tuberculosis complex (MTBC) in the sample, which confirmed a very old case of Tuberculosis. This TB case found in ancient remains is a clear indication of how far medical science has come. Historical Treatments: Life was very insecure and the treatments were sometimes totally out of reason. For instance, in 174 AD, Galen (the doctor of the Roman Emperor Marcus Aurelius) advised a "sea voyage" as a remedy for a multiplicity of symptoms in Tuberculosis. Contemporary Medicine: Present-day science has substituted such treatments with sophisticated pharmaceuticals tailored to the patient's condition, be it inactive or active form of the disease or drug-resistant one.
+                    </div>
+                </div>
+
+                <div class="disease-card">
+                    <h3 class="disease-name">Smallpox</h3>
+                    <p class="disease-description">
+                        <strong>Origins and Catastrophic Impact</strong>
+                    </p>
+                    <div class="historical-note">
+                        Smallpox origins are mysterious, but scientific research has confirmed that it has been the enemy of humans for at least 3 millennia. It was a horrible weapon against humanity, excruciating with a 30% death rate out of the infected.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Transmission and Spread</strong>
+                    </div>
+                    <div class="historical-note">
+                        Very easily the virus transmitted from one person to another and the most usual cases of contamination were via the air. People caught the virus: Inhalation - Breathing the air that contains the virus living particles. Close Contact - If a healthy person met an infected one and the infected person talked, coughed, or sneezed, then the healthy person was exposed to the disease.
+                    </div>
+                    <div class="historical-note">
+                        <strong>From Early Control to Eradication</strong>
+                    </div>
+                    <div class="historical-note">
+                        Humanity's fight with Smallpox changed over time dramatically: Early Interventions - The first methods to control the disease were putting the vulnerable in contact with the matter taken from smallpox pustules. Although it was a very crude method, it resulted in fewer cases of severe disease and deaths than those caused by natural infection. The Last Victory - It was mainly due to continuous medical progress in the mid-1900s that a worldwide campaign for the disease control and eventual eradication was launched. These steps led to a triumphant moment in medical history when the last case traced back to nature in 1977.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 1492-1750 -->
+        <div class="period-section">
+            <p class="period-date">1492 - 1750</p>
+            <h2 class="period-title">The Colonial Era Diseases</h2>
+
+            <div class="disease-grid">
+                <div class="disease-card">
+                    <h3 class="disease-name">Measles</h3>
+                    <p class="disease-description">
+                        <strong>Artistic Reflection: The Plague of Ashdod</strong>
+                    </p>
+                    <div class="historical-note">
+                        The painting "The Plague of Ashdod" by Nicolas Poussin in 1631, is a sad but effective allegory of the measles epidemic that caused the death of a great number of people. Poussin did not only use the Bible characters and themes for his narrative, but also to get the emotional response from the people of that time and make the story more understandable to them.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Depiction of Suffering:</strong> The art unambiguously exemplifies the horror of the disease through the visual of the figures in a mournful, ailing state. <strong>The Family Unit:</strong> Besides the suffering of the individuals, Poussin tells the story of the families who are under the load of the emotional and physical pressure. The painting shows the touching moment of decision of nursing an infected family member at the risk of one's safety in times of contagiousness.
+                    </div>
+                    <div class="historical-note">
+                        <strong>The Evolutionary History of Measles</strong>
+                    </div>
+                    <div class="historical-note">
+                        The virus that caused such sad scenarios has a long biological history and is believed to be a zoonotic virus that originated from the Rinderpest lineage, a viral disease that is mainly associated with animals having cloven hooves like cattle and bison. Evolutionary Timeline: The virus had mammalian ancestors which occasionally infected humans even around 4th Century BC, however, the one that diverged from Rinderpest to establish a separate human pathogen between 1100 and 1200 AD was indeed the measles virus.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Medical Distinction:</strong> The Persian physician Muhammad ibn Zakariya al-Razi (860–932) was the first one to give a full account of the disease. In his landmark book "The Book of Smallpox and Measles" he made a very important distinction of measles from other similar diseases such as smallpox and chickenpox.
+                    </div>
+                </div>
+
+                <div class="disease-card">
+                    <h3 class="disease-name">Typhus</h3>
+                    <p class="disease-description">
+                        <strong>A Louse-Borne Fever</strong>
+                    </p>
+                    <div class="historical-note">
+                        According to Joseph Colin, one of the key characteristics of typhus was that it was a louse-borne fever, which can quickly and suddenly infect a whole population. The most common features of the disease were abrupt and violent chills, fever of very high temperature, severe headaches, and a dark rash which eventually spread over the body, leaving the skin stained with the discoloration of the rash.
+                    </div>
+                    <div class="historical-note">
+                        Occurring delirium, extreme weakness, and the inability to stand or speak were the signs of typhus patients' continued deterioration, as it was horribly sticking around. At this point in the progress of the disease, they were dependent on the help of others for everyday necessities and making them conscious of the fact that survival was a gamble; especially among the ill-fed and already frail.
+                    </div>
+                    <div class="historical-note">
+                        Conlon points out that typhus lived off the conditions of overcrowding, poverty, and lack of hygiene. Infections that resulted from wars and were followed by armies on campaigns, prisons full of detainees, and slums without clean bedding could be considered as a nidus for lice; that is, not only were the lice more plentiful but they also escalated to each other as new hosts. Lice inside clothes, blankets, and sleeping spaces could keep going as these places and persons were infected and coming in contact with each other so that the outbreak would be spreading, and the rate of infection was unnoticed and could not be controlled anymore.
+                    </div>
+                    <div class="historical-note">
+                        To a large extent, typhus was a major factor behind the societal decline, which meant fast population loss, disintegrated families, and terror that lingered even when the disease had abated each time. This new enemy in the ranks of the soldiers caused the latter to collapse from this fever thus being a major drawback for them during their military fights and wars, as they shortened their duration and got worse in character. The cities, on the other hand, were affected in the most diverse ways such as through the huge burden on the carers, the interruption of trades, and the coming of the deserted streets - the signs of the existence of this terrible plight. Conlon's dissection reflects how typhus changed the course of human history, shaping societies in a way that their response to the disease became an important aspect of normal life.
+                    </div>
+                </div>
+                </div>
+
+                <div class="disease-card">
+                    <h3 class="disease-name">Whooping Cough</h3>
+                    <p class="disease-description">
+                        <strong>Pathology and Vulnerability</strong>
+                    </p>
+                    <div class="historical-note">
+                        As a matter of history, the main signs of whooping cough have always been the extreme physical symptoms suffered by the patients, among which were the long and violent fits of coughing, the difficult breathing, the vomiting, and the deep exhaustion. The infection was the most dangerous to the infant population and small children, thus, the risk of death in these fragile groups of the community was very high.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Societal Impact and Disruption</strong>
+                    </div>
+                    <div class="historical-note">
+                        The disease was organizing the cyclic waves of its epidemics and the community immunity was very low between those periods, so it kept resurfacing every few years. The recurring nature of these pandemics caused severe disturbances of the people's way of life: Families under Pressure - The atmosphere of terror accompanied by the continuous losing of the people close to the affected families was bringing emotional and physical overload of the caregivers to their peak. Social Isolation - Due to the implementation of the prevention measures, children were frequently deprived of social interaction possibilities that resulted in damaging not only their growth but also their everyday lives. Medical Pressure - The medical field was facing great pressure and could hardly keep up with fast-spreading infections during these crisis times.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Historical Legacy</strong>
+                    </div>
+                    <div class="historical-note">
+                        The long-term presence of the disease led to the generations of elevated childhood mortality. Yet, the intensity of these epidemics was so great that they forced people to change, thus civilizations became more prepared and more responsive to infectious diseases which spread quickly.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- 1751-1877 -->
+        <div class="period-section">
+            <p class="period-date">1751 - 1877</p>
+            <h2 class="period-title">The Industrial Age Plagues</h2>
+
+            <div class="disease-grid">
+                <div class="disease-card">
+                    <h3 class="disease-name">Yellow Fever</h3>
+                    <p class="disease-description">
+                        <strong>Origins and Transmission</strong>
+                    </p>
+                    <div class="historical-note">
+                        Yellow Fever is one such disease in the viral family Flaviviridae that originated in Africa. It even shares some similarities with the Ebola virus. The disease first came to the Americas through the transatlantic slave trade. The main culprit of the virus's spread is the bite of a mosquito, a fact that was only confirmed by researchers after several decades. The delay in the understanding of the cause of infection to the late 19th and early 20th centuries accounts for the very high number of deaths that the epidemics of Philadelphia, among other places, could make.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Symptoms and Pathology</strong>
+                    </div>
+                    <div class="historical-note">
+                        The extent of the illnesses caused by the virus can be dramatically different between its victims. Mild Cases: The majority of the infected persons do not manifest more than minor symptoms like fever, nausea, and vomiting. Severe Cases: The extreme symptoms are very few and the only ones that can eventually result in death. They comprise high fever and internal bleeding. The Name: It is because of these extreme cases that the disease was termed Yellow Fever, as the most common symptom of the yellowing of the skin is the presence of bile pigments in the blood.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Diagnosis and Prevention</strong>
+                    </div>
+                    <div class="historical-note">
+                        Even today, doctors still find it difficult to diagnose Yellow Fever since it shares a very similar symptom set with diseases such as Malaria and Leprosy. Testing: The definite diagnosis can only be made through antibody and nucleic acid testing. Preventing the disease relies on vaccination, and there is no specific treatment that can cure the disease. Research has been focusing on intervention to prevent future outbreaks.
+                    </div>
+                </div>
+
+                <div class="disease-card">
+                    <h3 class="disease-name">Scarlet Fever</h3>
+                    <p class="disease-description">
+                        <strong>Historical Identity and Symptoms</strong>
+                    </p>
+                    <div class="historical-note">
+                        Scarlet Fever was once commonly called "Rossalia." It is a disease caused by a bacterial toxin that is very similar to the one in strep throat. A few centuries ago, the condition was dreaded because it took the lives of children the most and people with weak immune systems.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Main Symptoms:</strong> The disease can only be mistaken by a brilliant red rash all over the body, it was also associated with fever, vomiting, and a quite sore throat.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Early Treatment and Quarantine</strong>
+                    </div>
+                    <div class="historical-note">
+                        Scarlet Fever was a deadly disease before the invention of modern medicine. Treatment of symptoms - They used only palliative care—relieving the patient's symptoms without actually battling the infection. Containment - As a result of the bacteria being highly contagious, quarantine with strict measures was the only way to stop the spread of the disease.
+                    </div>
+                    <div class="historical-note">
+                        <strong>Modern Medical Triumph</strong>
+                    </div>
+                    <div class="historical-note">
+                        After many years, Scarlet Fever is no longer a fatal case. The major reason for this is the use of antibiotics with penicillin and amoxicillin as the two main drugs. Basically, the risk of the disease turning into serious complications or leading to death has been drastically reduced by these developments to the point that it is now only a manageable condition.
+                    </div>
+                </div>
+
+                <div class="disease-card">
+                    <h3 class="disease-name">Malaria</h3>
+                    <p class="disease-description">
+                        <strong>Introduction and Spread in the Americas</strong>
+                    </p>
+                    <div class="historical-note">
+                        Malaria went on to dominate the whole of the United States for around 300 years from 1500 to 1800, with a very high concentration of cases in the Southern areas and along riverbanks. Experts think that the disease was brought to the 'New World' by germs that came with Europeans and people who were shipped from Africa as slaves.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Understanding the history of these diseases helps us appreciate modern medicine and remain vigilant against emerging threats.</p>
+        <p>Sources: ASM.org, HRSA, Historic England, CDC, and medical archives</p>
+        <p>Created by: Heidy Monroy, Eric Goodwin, Asia Salcedo, Josh Lewellyn, Arda Kahya, Xcaret Gonzalez, Sepria Doherty, and Natalie Diaz</p>
+        <p>Group30 ™</p>
+    </div>
+        <script>
+            // Back button - navigate to interactive gallery
+            document.addEventListener('DOMContentLoaded', function () {
+                var btn = document.getElementById('backToGallery');
+                if (btn) {
+                    btn.addEventListener('click', function () {
+                        window.location.href = 'htmlindex.html';
+                    });
+                }
+            });
+        </script>
+</body>
+</html>
